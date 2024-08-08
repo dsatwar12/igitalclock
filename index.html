@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+<h1>its a digital clock</h1>
+<br>
+<h1 id="root"></h1>
+    </center>
+<script>
+   let div= document.getElementById('root')
+   let sec=0
+   let munite=0
+   let hours=0
+   setInterval(()=>{
+    div.innerHTML=`hours:${hours}--munites:${munite}--sec:${ sec++}`
+    if(sec==60){
+        munite++
+        sec=0
+    }
+    if( munite==60){
+        munite=0
+        hours++
+    }
+    if( hours==1){
+        hours=0
+        hours++
+    }
+
+   },1000)
+</script>
+
+</body>
+</html>
